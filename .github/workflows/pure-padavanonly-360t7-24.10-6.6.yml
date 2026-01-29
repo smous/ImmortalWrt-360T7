@@ -165,7 +165,7 @@ jobs:
          name: ${{ steps.tag.outputs.release_name }} 
          tag_name: ${{ steps.tag.outputs.release_tag }}
          body_path: release.txt
-         files: ./bin/targets/**/*
+         files: ${{ env.FIRMWARE }}/*
 
     - name: 删除工作流运行
       uses: GitRML/delete-workflow-runs@main
